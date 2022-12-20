@@ -3,17 +3,17 @@
 
 int main(){
     system("clear");
-    int n=0, min=0, max=0, mid=0;
+    int rows=0, start=0, end=0, mid=0, cols=0;
     printf("Enter the number: ");
-    scanf("%d", &n);
-    int num = (n*2)-1;
-    for(int i=0; i<n; i++){
-        mid = (num/2)+1;
-        min = mid-i;
-        max = mid+i;
-        for(int j=0; j<=num; j++){
-            if(j >= min && j <= max) printf("*");
-            else printf(" ");
+    scanf("%d", &rows);
+    cols = (rows*2)-1;
+    mid = (cols/2)+1; 
+    for(int i=0; i<rows; i++){
+        start = mid-i;
+        end = mid+i;
+        for(int j=1; j<=cols; j++){
+            if(j >= start && j <= end) printf("* ");
+            else printf("  ");
         }
         printf("\n");
     }

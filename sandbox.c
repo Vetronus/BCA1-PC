@@ -1,19 +1,25 @@
-#include<stdio.h>
-#include<stdlib.h>
-//WAP to print prime numbers upto 300.
-int main(){
+#include <stdio.h>
+#include <stdlib.h>
+// WAP to print prime numbers upto 300.
+int main()
+{
     system("clear");
-    int prime = 1;
-    for(int i=2; i<=300; i++){
-        prime = 1;
-        for(int j=2; j<i; j++){
-            if(i%j == 0){
-                prime = 0;
-                break;
-            }
-        }
-        if(prime) printf("%d, ");
-    }
+    int i, j, rows, k, m = 1;
+    printf(" Enter a number to define the rows: ");
+    scanf("%d", &rows);
     printf("\n");
-    return 0;
+    
+    for ( i =1; i <= rows; i++)  
+    {  
+        for ( j = 1; j <= rows - i; j++)  
+        {  
+            printf ("  ");   
+        }  
+        // use for loop where k is less than equal to (2 * i -1)  
+        for ( k = 1; k <= ( 2 * i - 1); k++)  
+        {  
+            printf ("* "); // print the Star  
+        }  
+        printf ("\n");  
+    }  
 }
